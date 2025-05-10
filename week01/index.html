@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>WDD 131 – Dynamic Web Fundamentals - Rex J. Kapoloma</title>
     <meta name="description" content="WDD 131 – Dynamic Web Fundamentals by Rex J. Kapoloma. Learn about me and explore Malawi, a unique country with rich culture and biodiversity.">
     <meta name="author" content="Rex J. Kapoloma">
@@ -13,28 +13,31 @@
     <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <header>
+    <header role="banner">
         <h1>WDD 131: Dynamic Web Fundamentals - Rex J. Kapoloma</h1>
-        <nav>
-            <a href="https://www.linkedin.com/in/rex-jonathan-kapoloma-64b852351/">LinkedIn</a>
-            <a href="https://byupw.instructure.com/">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/josh/1?lang=eng&id=p9#p9">Scripture</a>
-            <a href="#">Final Project</a>
+        <nav role="navigation">
+            <a href="https://www.linkedin.com/in/rex-jonathan-kapoloma-64b852351/" aria-label="Visit my LinkedIn profile">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" aria-label="Access Canvas learning platform">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/josh/1?lang=eng&id=p9#p9" aria-label="Read a scripture from Joshua 1:9">Scripture</a>
+            <a href="#" aria-label="View my final project">Final Project</a>
         </nav>
     </header>
-    <main>
-        <section class="card">
-            <h2>About Me</h2>
-            <img src="images/rex_profile.jpg" alt="Rex J. Kapoloma" class="rex-image">
+    <main role="main">
+        <section class="card" aria-labelledby="about-me">
+            <h2 id="about-me">About Me</h2>
+            <img src="images/rex_profile2.jpg" alt="Portrait of Rex J. Kapoloma, a software engineer and computer technician" class="rex-image">
             <p>I'm Rex Jonathan. Born and raised in Malawi, I'm a passionate Software Engineer and skilled Computer Technician. I craft beautiful, functional software and provide top-notch technical support, ensuring seamless system performance. To me, it's all about harnessing the power of computers to drive innovation, solve complex problems, and create digital solutions that make a difference.</p>
         </section>
-        <section class="card">
-            <h2>Lilongwe, Malawi</h2>
-            <img src="images/flag-malawi3.webp" alt="Official Flag of Malawi">
+        <section class="card" aria-labelledby="lilongwe-malawi">
+            <h2 id="lilongwe-malawi">Lilongwe, Malawi</h2>
+            <figure>
+                <img src="images/flag-malawi3.webp" alt="Official Flag of Malawi with black, red, and green stripes and a rising sun" class="malawi-flag">
+                <figcaption class="flag-caption">Official Flag of Malawi</figcaption>
+            </figure>
             <p>Malawi, known as the "Warm Heart of Africa," is a landlocked country in southeast Africa. It is famous for Lake Malawi, which covers about a third of the country and is home to more fish species than any other lake in the world. Malawi is also known for its friendly people, diverse wildlife, and stunning landscapes.</p>
         </section>
-        <section class="card">
-            <h2>Web Dev Resources</h2>
+        <section class="card" aria-labelledby="web-dev-resources">
+            <h2 id="web-dev-resources">Web Dev Resources</h2>
             <ul>
                 <li><a href="https://dev.to/">Dev.to Community</a></li>
                 <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
@@ -45,7 +48,7 @@
             </ul>
         </section>
     </main>
-    <footer>
+    <footer role="contentinfo">
         <p>© <span id="currentyear"></span> 🎮 Rex Jonathan Kapoloma 🎮 Malawi</p>
         <p id="lastModified"></p>
     </footer>
