@@ -1,0 +1,29 @@
+@media screen and (min-width: 768px) {
+    /* Hide hamburger button in larger views */
+    .hamburger {
+        display: none;
+    }
+
+    /* Navigation menu styles (horizontal in larger views) */
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2.5rem;
+        background-color: #000000;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+        border-radius: 5px;
+    }
+
+    /* Temple gallery styles (3 columns in larger views) */
+    .temple-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    /* Main heading adjustment */
+    main h1 {
+        font-size: 2rem;
+    }
+}

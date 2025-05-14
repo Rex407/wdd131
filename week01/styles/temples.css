@@ -1,0 +1,128 @@
+/* Import Google Fonts for typography */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Header styles */
+header {
+    background-color: #1a3c5e;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Hamburger button (visible in mobile view) */
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+/* Navigation menu styles (hidden by default in mobile view) */
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #000000;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+/* Show navigation menu when active */
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #355e8a;
+    border-radius: 5px;
+}
+
+/* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #1a3c5e;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Temple gallery styles using CSS Grid (1 column in mobile) */
+.temple-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.temple-gallery figure {
+    margin: 0;
+}
+
+.temple-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.temple-gallery figcaption {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1a3c5e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
