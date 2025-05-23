@@ -1,0 +1,101 @@
+:root {
+    --primary-color: #DC1E35; /* Red from Iceland flag */
+    --secondary-color: #003897; /* Blue from Iceland flag */
+    --background-color: #FFFFFF; /* White from Iceland flag */
+    --text-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.data, .weather {
+    background-color: #E6F0FA; /* Light blue background */
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.data h2, .weather h2 {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.weather-icon::after {
+    content: '';
+}
+
+.weather p {
+    margin: 0.5rem 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Media Query for Desktop */
+@media (min-width: 768px) {
+    .info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .data, .weather {
+        width: 48%;
+    }
+
+    .weather-icon::after {
+        content: '⛅';
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+    }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 767px) {
+    .weather-icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: url('/images/weather-icon.svg.svg') no-repeat center;
+        background-size: contain;
+        vertical-align: middle;
+    }
+}
