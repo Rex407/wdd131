@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dedicated: "2015, June, 7",
             area: 96630,
             imageUrl:
-                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x250/payson-utah-temple-1416671-wallpaper.jpg",
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x250/payson-utah-temple-exterior-1416671-wallpaper.jpg",
             alt: "Payson Utah Temple"
         },
         {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dedicated: "1983, December, 2",
             area: 116642,
             imageUrl:
-                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-1518361-wallpaper.jpg",
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
             alt: "Mexico City Mexico Temple"
         },
         {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dedicated: "2019, March, 10",
             area: 41000,
             imageUrl:
-                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-2160932.jpg",
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-2160929.jpg",
             alt: "Rome Italy Temple"
         },
         {
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dedicated: "1972, February, 9",
             area: 130825,
             imageUrl:
-                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-utah/400x250/provo-utah-temple-1049898-wallpaper.jpg",
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-utah/400x250/provo-utah-temple-exterior-1056877-wallpaper.jpg",
             alt: "Provo Utah Temple"
         },
         {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dedicated: "2017, December, 10",
             area: 42655,
             imageUrl:
-                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/cedar-city-utah/400x250/cedar-city-utah-temple-1996865-wallpaper.jpg",
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/cedar-city-utah/400x250/cedar-city-utah-temple-exterior-1996865-wallpaper.jpg",
             alt: "Cedar City Utah Temple"
         }
     ];
@@ -153,10 +153,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         console.log(`Filtered to ${filteredTemples.length} temples`);
         displayTemples(filteredTemples);
+
+        // Close the hamburger menu after a filter is applied (on mobile)
+        const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+        if (navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    // Setup hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+        });
+    } else {
+        console.error('Error: Hamburger or nav-links not found.');
     }
 
     // Setup navigation event listeners
-    const links = document.querySelectorAll('nav a');
+    const links = document.querySelectorAll('.nav-links a');
     if (!links.length) {
         console.error('Error: No navigation links found.');
         document.body.innerHTML = '<p>Error: Navigation links not found.</p>';
