@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LDS Temple information with filtering by age and size">
+    <meta name="author" content="Rex J. Kapoloma">
+    <title>LDS Temples</title>
+    <link rel="stylesheet" href="/styles/filtered-temples.css">
+    <link rel="stylesheet" href="/styles/temples-large.css">
+</head>
+<body>
+    <header>
+        <h1>LDS Temples</h1>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+        <div id="temple-grid"></div>
+    </main>
+    <footer role="contentinfo">
+        <p>© <span id="current-year"></span> 🎮 Rex Jonathan Kapoloma 🎮 Malawi</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+    <script src="/scripts/filtered-temples.js" defer></script>
+</body>
+</html>
