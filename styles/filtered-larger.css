@@ -1,0 +1,68 @@
+/* Larger screens (tablets and desktops) */
+@media screen and (min-width: 768px) {
+    /* Header */
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Navigation */
+    nav ul {
+        gap: 2rem;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    /* Temple Grid */
+    #temple-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    .temple-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .temple-card p {
+        font-size: 1.1rem;
+    }
+
+    .temple-card img {
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 1.1rem;
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Header */
+    header h1 {
+        font-size: 3rem;
+    }
+
+    /* Temple Grid */
+    #temple-grid {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 2rem;
+    }
+
+    .temple-card {
+        padding: 1.5rem;
+    }
+
+    .temple-card h2 {
+        font-size: 2rem;
+    }
+
+    .temple-card img {
+        max-height: 300px;
+    }
+}
