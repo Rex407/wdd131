@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site plan for Iceland Explorer, a website for WDD 131 – Dynamic Web Fundamentals by Rex J. Kapoloma.">
+  <meta name="author" content="Rex J. Kapoloma">
+  <title>Iceland Explorer Site Plan - WDD 131</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+  <header>
+    <h1>Iceland Explorer Site Plan</h1>
+  </header>
+  <main>
+    <section id="site-name">
+      <h2>Site Name</h2>
+      <p><strong>Name:</strong> Iceland Explorer</p>
+      <p><strong>Description:</strong> This name reflects a website dedicated to exploring Iceland’s natural beauty, culture, and travel information. It’s chosen to attract tourists and enthusiasts interested in learning more about Iceland.</p>
+    </section>
+
+    <section id="site-purpose">
+      <h2>Site Purpose</h2>
+      <p>The site serves as a resource for travelers and enthusiasts by providing information about Iceland’s geography, culture, and current weather conditions. It includes a data section with key facts and a weather section for real-time updates, helping users plan their visit.</p>
+    </section>
+
+    <section id="scenarios">
+      <h2>Scenarios</h2>
+      <ol>
+        <li>A tourist planning a trip to Iceland wants to know the country’s population, capital, and currency to prepare for their visit. They expect to find this information easily on the homepage.</li>
+        <li>A hiker wants to check the current weather in Iceland, including temperature and wind chill, to decide if it’s safe to hike a glacier. They need this information prominently displayed.</li>
+      </ol>
+    </section>
+
+    <section id="color-schema">
+      <h2>Color Schema</h2>
+      <ul>
+        <li><strong>Primary Color:</strong> #DC1E35 (Red) – Used for header and footer backgrounds.</li>
+        <li><strong>Secondary Color:</strong> #003897 (Blue) – Used for section headings (e.g., Data, Weather).</li>
+        <li><strong>Background Color:</strong> #FFFFFF (White) – Used for the main background.</li>
+        <li><strong>Text Color:</strong> #333333 – Used for body text.</li>
+        <li><strong>Accent Color:</strong> rgba(230, 240, 250, 0.9) (Light Blue) – Used for the weather section background.</li>
+      </ul>
+    </section>
+
+    <section id="typography">
+      <h2>Typography</h2>
+      <ul>
+        <li><strong>Font:</strong> Roboto (Weights: 400, 700)</li>
+        <ul>
+          <li><strong>Headings:</strong> Roboto 700 (used for h1, h2, h3 headings).</li>
+          <li><strong>Body Text:</strong> Roboto 400 (used for paragraphs and other text).</li>
+        </ul>
+      </ul>
+    </section>
+
+    <section id="wireframe">
+      <h2>Wireframe</h2>
+      <h3>Mobile View</h3>
+      <p>A simple layout for mobile devices:</p>
+      <ul>
+        <li>Header at the top (Iceland Explorer title).</li>
+        <li>Hero image below the header, full-width.</li>
+        <li>Data section below the hero image, full-width.</li>
+        <li>Weather section below the data section, full-width.</li>
+        <li>Footer at the bottom.</li>
+      </ul>
+      <img src="images/Mobile View .png" alt="Wireframe sketch of Iceland Explorer homepage for mobile view" width="300">
+
+      <h3>Desktop View</h3>
+      <p>A layout for larger screens (wide desktop):</p>
+      <ul>
+        <li>Header at the top (Iceland Explorer title).</li>
+        <li>Hero image full-width as the background.</li>
+        <li>Data section overlapping the hero image on the left side.</li>
+        <li>Weather section overlapping the hero image on the right side, near the bottom.</li>
+        <li>Footer at the bottom.</li>
+      </ul>
+      <img src="images/Desktop View (≥ 1200px).png" alt="Wireframe sketch of Iceland Explorer homepage for desktop view" width="600">
+    </section>
+
+  </main>
+  <footer>
+    <p>© <span id="current-year"></span> 🎮 Rex Jonathan Kapoloma 🎮 | Iceland Explorer Site Plan</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+  <script>
+    // Set current year and last modified date in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
