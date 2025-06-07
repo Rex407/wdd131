@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #ffcccb, #87ceeb);
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #4a2c2a;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4a2c2a;
+    font-weight: bold;
+}
+
+select, input[type="date"], input[type="text"], textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #f9f9f9;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    font-size: 20px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffd700;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+button {
+    background: #d3d3d3;
+    color: #4a2c2a;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #c0c0c0;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+footer {
+    text-align: center;
+    color: #4a2c2a;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #4a2c2a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    main {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    select, input[type="date"], input[type="text"], textarea {
+        font-size: 12px;
+    }
+
+    .rating label {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
