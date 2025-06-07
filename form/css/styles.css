@@ -6,16 +6,17 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom right, #ffcccb, #87ceeb);
+    background: linear-gradient(to bottom right, #e6e6fa, #87ceeb); /* Lighter gradient for better contrast */
     padding: 20px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #333333; /* Darker text color for better contrast */
 }
 
 main {
-    background: rgba(255, 255, 255, 0.9);
+    background: #ffffff; /* Pure white for maximum contrast */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -26,7 +27,7 @@ main {
 
 h1 {
     text-align: center;
-    color: #4a2c2a;
+    color: #333333; /* Darker heading color */
     margin-bottom: 20px;
     font-size: 24px;
 }
@@ -38,17 +39,18 @@ h1 {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #4a2c2a;
+    color: #333333; /* Darker label color */
     font-weight: bold;
 }
 
 select, input[type="date"], input[type="text"], textarea {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #666666; /* Darker border for contrast */
     border-radius: 5px;
     font-size: 14px;
-    background: #f9f9f9;
+    background: #f9f9f9; /* Light gray background */
+    color: #333333; /* Darker text color */
 }
 
 textarea {
@@ -68,13 +70,13 @@ textarea {
 .rating label {
     font-size: 20px;
     cursor: pointer;
-    color: #ccc;
+    color: #666666; /* Darker neutral color for stars */
 }
 
 .rating input:checked ~ label,
 .rating label:hover,
 .rating label:hover ~ label {
-    color: #ffd700;
+    color: #ffd700; /* Gold for selected stars, contrasts well with background */
 }
 
 .checkbox-group {
@@ -86,11 +88,12 @@ textarea {
 .checkbox-group label {
     font-weight: normal;
     margin-left: 5px;
+    color: #333333; /* Darker checkbox label color */
 }
 
 button {
-    background: #d3d3d3;
-    color: #4a2c2a;
+    background: #005f73; /* Dark teal for button, contrasts with white */
+    color: #ffffff; /* White text on button */
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -102,11 +105,11 @@ button {
 }
 
 button:hover {
-    background: #c0c0c0;
+    background: #003d4d; /* Darker teal on hover */
 }
 
 .error {
-    color: #ff0000;
+    color: #d32f2f; /* Red for errors, meets contrast with white */
     font-size: 14px;
     margin-top: 10px;
     display: none;
@@ -114,7 +117,7 @@ button:hover {
 
 footer {
     text-align: center;
-    color: #4a2c2a;
+    color: #333333; /* Darker footer text */
     margin-top: 20px;
     font-size: 12px;
 }
@@ -123,7 +126,7 @@ a {
     display: block;
     text-align: center;
     margin-top: 15px;
-    color: #4a2c2a;
+    color: #005f73; /* Dark teal link color, contrasts with white */
     text-decoration: none;
     font-weight: bold;
 }
